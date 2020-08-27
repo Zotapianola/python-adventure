@@ -46,13 +46,13 @@ def start_game():
 def propose_game():
     print(colored("Manuk dice: ", "magenta"))
     print(colored("Te propongo una aventura... ", "magenta"))
-    time.sleep(1)
+    time.sleep(3)
     print(colored("Vamos a tirar un dado de 6 caras...", "magenta"))
-    time.sleep(1)
+    time.sleep(3)
     print(colored("Si el dado es mayor a 3... tu aventura parte con %s de vida" % str(HIGH_HP), "magenta"))
-    time.sleep(1)
+    time.sleep(3)
     print(colored("Si el dado es menor a 3... tu aventura parte con %s de vida" % str(LOW_HP), "magenta"))
-    time.sleep(1)
+    time.sleep(3)
     print(colored("Si el dado es 3... debes reintentar..." , "magenta"))
     time.sleep(2)
     print(colored("SUERTE... la vas a necesitar" , "magenta"))
@@ -64,20 +64,20 @@ def check_dice(dice):
         if dice < 3:
             print(colored("Dado menor a 3 :'(", "red", attrs=['bold']))
             PLAYER_HP = LOW_HP
-            time.sleep(1)
+            time.sleep(3)
             print(colored("Bien... pero pudo ser mejor... tu aventura ha partido con un HP de %s" % str(PLAYER_HP), "magenta", attrs=['bold']))
             return dice
         elif dice > 3:
             print(colored("Dado mayor a 3","green", attrs=['bold']))
             PLAYER_HP = HIGH_HP
-            time.sleep(1)
+            time.sleep(3)
             print(colored("Felicidades!!!",  "magenta", attrs=['bold']))
-            time.sleep(1)
+            time.sleep(3)
             print(colored("Sorprendente... tu aventura ha partido con un HP de %s :)" % str(PLAYER_HP), "magenta", attrs=['bold']))
             return dice
         else:
             print("Dado igual a 3, se lanza de nuevo")
-            time.sleep(1)
+            time.sleep(3)
 
             
 def roll_dice():
@@ -94,15 +94,15 @@ def roll_dice():
 def first_challenge():
     """ primer desafio del juego """
     print(colored("Manuk dice: ", "magenta"))
-    time.sleep(1)
+    time.sleep(3)
     print(colored("Estas en un calabozo y hay 2 puertas... en la puerta 1 hay una bestia mortifera", "magenta"))
-    time.sleep(1)
+    time.sleep(3)
     print(colored("Bien... me decias que tu sabiduria era muy valorada en tu pueblo, veamos si tomas buenas decisiones.", "magenta"))
     time.sleep(4)
     print(colored("En la puerta 2 está la salida", "magenta"))
-    time.sleep(1)
+    time.sleep(3)
     print(colored("Vamos a lanzar un dado...si tu dado es par, acertarás a la salida...", "magenta"))
-    time.sleep(1)
+    time.sleep(3)
     print(colored("De lo contrario debes enfrentar a la bestia mortal...", "magenta"))
     global gonna_roll
     player_action = ask_dice()
@@ -121,13 +121,13 @@ def first_challenge():
             else:
                 
                 print(colored("Manuk dice: ", "magenta"))
-                time.sleep(1)
+                time.sleep(3)
                 print(colored("Oh no... ", "magenta"))
-                time.sleep(1)
+                time.sleep(3)
                 print(colored("Me temo que deberás... enfrentar a la...", "magenta"))
-                time.sleep(1)
+                time.sleep(3)
                 print(colored("BESTIA...", 'red'))
-                time.sleep(1)
+                time.sleep(3)
                 gonna_roll = False
                 dice_result = "beast"
                 return dice_result
@@ -217,9 +217,9 @@ first_challenge_result = first_challenge()
 if first_challenge_result == "beast":    
     print(colored("Manuk dice: ", "magenta"))
     print(colored("Necesitaras suerte porque de esta bestia es muy dura...", "magenta"))
-    time.sleep(1)
+    time.sleep(3)
     print(colored("tienes una espada que hara 10 de daño multiplicada por un dado de 6 caras", "magenta"))
-    time.sleep(1)
+    time.sleep(3)
     print(colored("La bestia al atacar tambien tiene un dado", "magenta"))
 else:
     print(colored("Felicidades, tienes la salida...", "green"))
